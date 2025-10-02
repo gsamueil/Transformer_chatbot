@@ -67,3 +67,16 @@ Install with:
 
 pip install torch transformers flask nltk sentencepiece tqdm numpy pandas
 
+
+
+Transformer_chatbot/
+├── data.txt              # dataset
+├── preprocess.py         # preprocessing pipeline
+├── my_tokenizer.py       # tokenizer utilities
+├── train_qabot_words.py  # training script
+├── chat_words.py         # inference script
+├── flask_app.py          # Flask demo
+├── templates/            # HTML templates
+└── static/               # static assets (CSS/JS)
+
+
