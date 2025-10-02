@@ -1,0 +1,62 @@
+Q: What is a Transformer?
+A: It's a deep learning model that uses attention to simultaneously analyze context.
+
+Q: What are the advantages of Transformers?
+A: It supports parallel learning and is good at learning long dependencies.
+
+Q: What are the disadvantages of Transformers?
+A: It requires a lot of computation and is inefficient for processing long inputs.
+
+Q: What is GPT?
+A: It's a language generation model based on a Transformer decoder.
+
+Q: What is BERT?
+A: It's a language understanding model based on a Transformer encoder.
+
+Q: What is attention?
+A: It's a mechanism that calculates the correlation between input words using weights.
+
+Q: What is self-attention?
+A: It's a method for automatically calculating the relationships between words in a sentence.
+
+Q: What is an encoder?
+A: It's the part that extracts features to understand the input sentence.
+
+Q: What is a decoder?
+A: It's the part that generates new outputs based on the understood information.
+
+Q: Why is positional encoding necessary?
+A: Because the Transformer doesn't know the order, it adds positional information.
+
+Q: What is multi-head attention?
+A: It creates a richer representation by performing attention multiple times from different perspectives.
+
+Q: Why is a feedforward network used?
+A: It's the step that processes the information obtained through attention in a more complex way.
+
+Q: What is layer normalization?
+A: It's a regularization technique that stabilizes learning and accelerates convergence.
+
+Q: Why is dropout necessary?
+A: It prevents overfitting and helps the model generalize.
+
+Q: When is masking necessary?
+A: It's used when you need to predict the next word without looking at the future words.
+
+Q: How is a Transformer different from an RNN?
+A: While RNNs process sequentially, Transformers process in parallel, making them faster and more efficient.
+
+Q: What's the difference between Transformers and CNNs?
+A: CNNs are strong at local features, while Transformers look at the entire context simultaneously.
+
+Q: Where are Transformers used?
+A: They're used in a variety of fields, including translation, summarization, question-answering, chatbots, and speech processing.
+
+Q: What is ChatGPT?
+A: It's a large-scale language generation model based on the GPT series.
+
+Q: What is fine-tuning?
+A: It's additionally training an already trained model for a specific task.
+
+Q: What is pre-training?
+A: It's the process of first learning general language patterns using large amounts of data.
