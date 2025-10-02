@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ChatBot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="chat-container">
+    <h2>🤖 Simple Q&A Bot</h2>
+    <div id="chatBox" class="chat-box"></div>
+    <div class="input-area">
+      <input type="text" id="userInput" placeholder="Type your question..." onkeypress="if(event.key==='Enter'){sendMessage();}">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    async function sendMessage() {
+      const userInput = document.getElementById("userInput");
+      const chatBox = document.getElementById("chatBox");
+      const msg = userInput.value.trim();
+
+      if (msg === "") return;
+
+      // عرض رسالة المستخدم
+      chatBox.innerHTML += `<div class="user"><strong>You:</strong> ${msg}</div>`;
+      userInput.value = "";
+
+      // طلب من Flask
+      const response = await fetch("/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: msg })
+      });
+
+      const data = await response.json();
+      const botReply = data.reply;
+
+      // عرض رد البوت
+      chatBox.innerHTML += `<div class="bot"><strong>Bot:</strong> ${botReply}</div>`;
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+  </script>
+</body>
+</html>
